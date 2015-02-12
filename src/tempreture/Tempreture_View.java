@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +21,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 
 public class Tempreture_View extends Frame implements ActionListener,WindowListener{
+	
 	public Tempreture_View(){
 		addWindowListener(this);
 		setTitle("Tempreture");
@@ -39,8 +39,7 @@ public class Tempreture_View extends Frame implements ActionListener,WindowListe
 				tempreture= rs.getDouble("tempreture");
 				setLayout(new FlowLayout(FlowLayout.CENTER));
 				add(new Label("["+year+"年  "+month+"月　　　"+tempreture+"℃ ]"));
-		//		add(new Label(month+"月"));
-		//		add(new Label(tempreture+"℃"));
+				
 				if(year==2013){
 					data.addValue(tempreture,"気温 2013年",month+"月");
 				}else if(year==2014){
