@@ -8,5 +8,4 @@ public class Tempreture2_main {
 		graph.setBounds(5,5,655,455);
 		graph.setVisible(true);
 	}
-
 }
